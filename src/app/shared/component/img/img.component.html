@@ -1,0 +1,56 @@
+
+    <header class="p-4 mb-4 header">
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-12 text-center">
+      <h1 class="heading">world countries data</h1>
+      <p>Currently,we have 250 countries</p>
+      </div>
+      </div>
+      </div>
+      </header>
+      <form>
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-8 offset-2">
+        <div class="form-group">
+        <input type="text"   placeholder="Search countries by name, city and languages" id="searchbox" class="form-control"/>
+        </div>
+        <button class="button">Name <a href="javascript:;">
+          <i class="fa-solid fa-arrow-down"></i>
+         </a> </button>
+        <button class="button">Capital</button>
+        <button class="button">Population</button>
+        <a class="chart" href="javascript:;">
+          <i class="fa-solid fa-chart-column fa-3x"></i>
+          </a>
+        </div>
+        </div>
+        </div>
+
+        </form>
+        <div class="container-fluid">
+      <div class="row" id="countrycontainer">
+        <div class="col-md-3 mb-4" *ngFor="let img of imgData">
+          <div class="country">
+          <figure class="countrycard p-4">
+          <img class="countryImg" [lazySrc]="img.flag" alt="flag" title="flag" appLazyload loading="lazy" [placeholderSrc]="'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=='">
+          <figcaption>
+          <div class="countryinfo p-2">
+          <div class="row">
+          <div class="col-12">
+          <h3 class="countryname text-center">{{img.name}}</h3>
+          <p class="mb-0"><b>capital</b>: {{img.capital}}</p>
+          <p class="mb-0"><b>languages</b>:
+                  {{img.languages}}</p>
+          <p class="mb-0"><b>population</b>: {{img.population}}</p>
+          </div>
+          </div>
+          </div>
+
+          </figcaption>
+          </figure>
+          </div>
+      </div>
+      </div>
+
