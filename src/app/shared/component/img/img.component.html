@@ -34,7 +34,10 @@
         <div class="col-md-3 mb-4" *ngFor="let img of imgData">
           <div class="country">
           <figure class="countrycard p-4">
-          <img class="countryImg" [lazySrc]="img.flag" alt="flag" title="flag" appLazyload loading="lazy" [placeholderSrc]="'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=='">
+          <img class="countryImg"
+          [lazySrc]="img.flag"
+          alt="flag" title="flag" appLazyload loading="lazy" [placeholderSrc]="'https://placehold.co/300x200'">
+
           <figcaption>
           <div class="countryinfo p-2">
           <div class="row">

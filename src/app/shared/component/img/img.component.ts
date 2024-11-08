@@ -8,6 +8,7 @@ import { imgArr } from '../../const/img';
   styleUrls: ['./img.component.scss']
 })
 export class ImgComponent implements OnInit {
+
  imgData :Array<Iimg> = imgArr
   constructor() { }
 
